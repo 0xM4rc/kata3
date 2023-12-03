@@ -42,10 +42,10 @@ public class JFreeBarChartDisplay extends JPanel implements BarChartDisplay {
     private CategoryDataset createDataset(BarChart barChart) {
         final DefaultCategoryDataset dataset = new DefaultCategoryDataset();
         int i = 0;
-        for (String s : barChart.getSeries()) {
-            System.out.println(barChart.getValues().get(i));
-            System.out.println(barChart.getSeries().get(i));
-            dataset.addValue(barChart.getValues().get(i), "Conteo", barChart.getSeries().get(i));
+        for (String s : barChart.series()) {
+            System.out.println(barChart.values().get(i));
+            System.out.println(barChart.series().get(i));
+            dataset.addValue(barChart.values().get(i), "Conteo", barChart.series().get(i));
             i++;
         }
         return dataset;
