@@ -23,7 +23,7 @@ public class JFreeBarChartDisplay extends JPanel implements BarChartDisplay {
 
     @Override
     public void show(BarChart barChart) {
-        add(new ChartPanel(toChart(createDataset(barChart)));
+        add(new ChartPanel(toChart(createDataset(barChart))));
     }
 
     private JFreeChart toChart(CategoryDataset dataset) {
