@@ -15,7 +15,6 @@
     </properties>
 
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/jfree/jfreechart -->
         <dependency>
             <groupId>jfree</groupId>
             <artifactId>jfreechart</artifactId>
@@ -23,5 +22,4 @@
         </dependency>
 
     </dependencies>
-
 </project>

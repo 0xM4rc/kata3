@@ -20,7 +20,6 @@ public class JFreeBarChartDisplay extends JPanel implements BarChartDisplay {
         setLayout(new BorderLayout());
     }
 
-
     @Override
     public void show(BarChart barChart) {
         add(new ChartPanel(toChart(createDataset(barChart))));
@@ -29,8 +28,8 @@ public class JFreeBarChartDisplay extends JPanel implements BarChartDisplay {
     private JFreeChart toChart(CategoryDataset dataset) {
         JFreeChart chart = ChartFactory.createBarChart(
                 "",
-                "Values",
-                "Count",
+                "values",
+                "count",
                 dataset,
                 PlotOrientation.VERTICAL,
                 true,

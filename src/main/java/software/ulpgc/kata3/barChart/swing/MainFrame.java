@@ -7,17 +7,17 @@ public class MainFrame extends JFrame {
     private JFreeBarChartDisplay barChartDisplay;
 
     public MainFrame() throws HeadlessException {
-        setTitle("BarPlot");
+        setTitle("Bar Chart");
         setSize(800, 600);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-        add(createChartDisplay());
+        add(createBarChartDisplay());
     }
 
-    private Component createChartDisplay() {
+    private Component createBarChartDisplay() {
         this.barChartDisplay = new JFreeBarChartDisplay();
-        return  this.barChartDisplay;
+        return this.barChartDisplay;
     }
 
     public BarChartDisplay barChartDisplay(){
