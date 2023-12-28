@@ -22,11 +22,11 @@ public class JFreeChartDisplay extends JPanel implements BarChartDisplay {
 
     @Override
     public void show(BarChart barChart) {
-        add(new ChartPanel(toChart(createdataset(barChart))));
+        add(new ChartPanel(toChart(createDataset(barChart))));
     }
 
     private JFreeChart toChart(CategoryDataset dataset) {
-        JFreeChart chart = ChartFactory.createBarChart(
+        JFreeChart chart= ChartFactory.createBarChart(
                 "",
                 "Values",
                 "Count",
@@ -41,15 +41,15 @@ public class JFreeChartDisplay extends JPanel implements BarChartDisplay {
         CategoryAxis domainAxis = plot.getDomainAxis();
 
         domainAxis.setCategoryLabelPositions(CategoryLabelPositions.UP_45);
-
-        return dataset;
+        return chart;
     }
 
-    private CategoryDataset createdataset(BarChart barChart) {
+    private CategoryDataset createDataset(BarChart barChart) {
         final DefaultCategoryDataset dataset = new DefaultCategoryDataset();
 
         IntStream.range(0, barChart.series().size())
-                .forEach(i->dataset.addValue(barChart.values().get(i), "", barChart.series().get(i)));
+                .forEach(i -> dataset.addValue(barChart.values().get(i), "", barChart.series().get(i)));
+
         return dataset;
     }
 }

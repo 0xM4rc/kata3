@@ -7,8 +7,8 @@ public class MainFrame extends JFrame {
     private JFreeChartDisplay barChartDisplay;
 
     public MainFrame() throws HeadlessException {
-        setTitle("BarChart");
-        setSize(800,600);
+        setTitle("Bar Chart");
+        setSize(800, 600);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
